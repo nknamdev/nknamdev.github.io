@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neetesh Kumar Namdev - Cloud Engineer with 2+ years of AWS production experience, AWS Certified Solutions Architect - Associate, and DevOps exposure.">
+  <meta name="keywords" content="AWS Cloud Engineer, Cloud Engineer, DevOps Engineer, AWS, EC2, VPC, IAM, S3, RDS, EKS, Kubernetes, Docker, Jenkins, GitHub Actions, CI/CD, CloudFormation, Linux, ServiceNow">
+  <meta name="author" content="Neetesh Kumar Namdev">
+  <title>Neetesh Kumar Namdev | AWS Cloud Engineer | DevOps</title>
+  <style>
+    :root{
+      --bg:#f5f7fb;--surface:#fff;--surface-2:#eef4ff;--text:#172033;--muted:#607084;
+      --line:#dfe6ef;--accent:#2563eb;--accent-2:#1e40af;--dark:#0f172a;
+      --shadow:0 12px 35px rgba(15,23,42,.07);--radius:16px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{background:linear-gradient(135deg,#0b1220 0%,#172554 62%,#1d4ed8 100%);color:#fff;padding:76px 0 62px}
+    .hero{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+    .eyebrow{font-size:14px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#bfdbfe;margin:0 0 12px}
+    h1{font-size:clamp(38px,6vw,62px);line-height:1.08;letter-spacing:-.04em;margin:0 0 12px}
+    .headline{font-size:clamp(20px,3vw,27px);font-weight:700;color:#dbeafe;margin:0 0 18px}
+    .summary{max-width:820px;font-size:17px;color:#e5e7eb;margin:0}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border-radius:10px;border:1px solid rgba(255,255,255,.28);color:#fff;background:rgba(255,255,255,.08);font-weight:750}
+    .btn.primary{background:#fff;color:#1e3a8a;border-color:#fff}
+    .btn:hover{text-decoration:none;transform:translateY(-1px)}
+    .contact-mini{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px;color:#dbeafe;font-size:14px}
+    .contact-mini a{color:#dbeafe}
+    .profile-mark{width:128px;height:128px;border:1px solid rgba(255,255,255,.25);border-radius:28px;display:grid;place-items:center;background:rgba(255,255,255,.08);font-size:42px;font-weight:900;box-shadow:0 18px 40px rgba(0,0,0,.2)}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    nav .container{display:flex;gap:24px;overflow-x:auto}
+    nav a{padding:15px 0;color:var(--text);font-size:14px;font-weight:800;white-space:nowrap}
+    section{padding:52px 0 0;scroll-margin-top:62px}
+    .section-kicker{color:var(--accent);font-size:13px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;margin:0 0 5px}
+    h2{font-size:30px;letter-spacing:-.025em;margin:0 0 22px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+    .card + .card{margin-top:16px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+    .skill h3,.project h3{font-size:18px;margin:0 0 8px}
+    .skill p,.project p{color:var(--muted);margin:0}
+    .skill strong{color:var(--text)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .tag{font-size:13px;font-weight:750;background:var(--surface-2);border:1px solid #d8e6ff;color:#1e40af;border-radius:999px;padding:5px 9px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:18px}
+    .stat{background:var(--dark);color:#fff;border-radius:14px;padding:20px}
+    .stat strong{display:block;font-size:30px;line-height:1.1}
+    .stat span{display:block;color:#cbd5e1;font-size:13px;margin-top:5px}
+    .job-head{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:17px}
+    .job-head h3{margin:0;font-size:21px}
+    .date{color:var(--muted);font-weight:750}
+    ul{padding-left:22px;margin:0}
+    li{margin:9px 0}
+    .cert-list{display:grid;gap:12px}
+    .cert{padding:15px 17px;border:1px solid var(--line);border-radius:12px;background:#fafcff}
+    .cert strong{display:block}
+    .cert span{color:var(--muted);font-size:14px}
+    .links{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .link-card{display:block;border:1px solid var(--line);border-radius:13px;padding:18px;background:#fff}
+    .link-card strong{display:block;color:var(--text)}
+    .link-card span{font-size:14px;color:var(--muted)}
+    footer{margin-top:58px;background:var(--dark);color:#cbd5e1;padding:30px 0}
+    footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){
+      .hero{grid-template-columns:1fr}.profile-mark{display:none}.grid,.links{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}.container{width:min(100% - 28px,1120px)}header{padding:55px 0 45px}
+      h1{font-size:40px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transform:none}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container hero">
+    <div>
+      <p class="eyebrow">AWS Cloud Engineering • DevOps • Production Support</p>
+      <h1>Neetesh Kumar Namdev</h1>
+      <p class="headline">Cloud Engineer | AWS Certified Solutions Architect – Associate</p>
+      <p class="summary">
+        Cloud Engineer with 2+ years of hands-on experience managing and supporting AWS production
+        environments at Tata Consultancy Services (TCS). Core experience includes AWS infrastructure,
+        Linux administration, monitoring, automation, production incident management and ITIL-aligned
+        change processes, with practical exposure to Docker, Kubernetes/Amazon EKS, Jenkins, GitHub Actions,
+        CI/CD and Infrastructure as Code.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="Neetesh_Kumar_Namdev_Cloud_DevOps_Resume.pdf" target="_blank" rel="noopener">View / Download Resume</a>
+        <a class="btn" href="https://github.com/nknamdev" target="_blank" rel="noopener">GitHub Profile</a>
+        <a class="btn" href="https://www.linkedin.com/in/neetesh-kumar-namdev-56706517a/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="contact-mini">
+        <a href="mailto:n.namdev.nn@gmail.com">n.namdev.nn@gmail.com</a>
+        <span>•</span><span>+91 7089122618</span>
+        <span>•</span><span>Open to Cloud / DevOps opportunities</span>
+      </div>
+    </div>
+    <div class="profile-mark" aria-hidden="true">NK</div>
+  </div>
+</header>
+
+<nav aria-label="Primary navigation">
+  <div class="container">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contributions">Contributions</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <section id="about">
+    <p class="section-kicker">Professional Profile</p>
+    <h2>About</h2>
+    <div class="card">
+      <p>
+        AWS Certified Solutions Architect – Associate and Cloud Engineer with 2+ years of hands-on
+        experience at Tata Consultancy Services (TCS). Experienced in EC2, VPC, IAM, S3, RDS,
+        Route 53, Auto Scaling, AWS Systems Manager, CloudWatch, AWS Backup and production support.
+      </p>
+      <p>
+        Practical DevOps exposure includes Docker, Kubernetes/Amazon EKS, Jenkins, Git/GitHub,
+        GitHub Actions, AWS CodePipeline, CodeBuild, CodeDeploy and CloudFormation. Experienced
+        with Linux administration, Bash, basic Python, ServiceNow and Incident, Problem and Change Management.
+      </p>
+      <div class="stats">
+        <div class="stat"><strong>2+</strong><span>Years AWS / Cloud experience</span></div>
+        <div class="stat"><strong>20%</strong><span>Server efficiency improvement</span></div>
+        <div class="stat"><strong>30%</strong><span>Downtime reduction</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <p class="section-kicker">Core Competencies</p>
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card skill"><h3>☁️ AWS Cloud</h3><p><strong>EC2, VPC, IAM, S3, EBS, EFS, RDS, DynamoDB, Aurora, Route 53, Lambda, ELB, Auto Scaling, CloudFront, Glacier, EMR, Glue, API Gateway, Systems Manager, AWS Backup, AWS CLI</strong></p></div>
+      <div class="card skill"><h3>🐳 Containers & Orchestration</h3><p><strong>Docker, Kubernetes, Amazon EKS, Amazon ECS</strong></p></div>
+      <div class="card skill"><h3>⚙️ DevOps & CI/CD</h3><p><strong>Jenkins, GitHub Actions, AWS CodePipeline, CodeBuild, CodeDeploy, CI/CD Pipelines</strong></p></div>
+      <div class="card skill"><h3>🏗️ Infrastructure as Code</h3><p><strong>AWS CloudFormation, YAML</strong></p></div>
+      <div class="card skill"><h3>📈 Monitoring & Logging</h3><p><strong>Amazon CloudWatch, AWS CloudTrail, AWS Config, Amazon SNS, Amazon SQS, AWS X-Ray</strong></p></div>
+      <div class="card skill"><h3>🐧 Linux & Scripting</h3><p><strong>Amazon Linux, Ubuntu Linux, Bash / Shell Scripting, Python (Basic), YAML</strong></p></div>
+      <div class="card skill"><h3>🌐 Networking</h3><p><strong>VPC Design, Subnets, Route Tables, NAT Gateway, Internet Gateway, Security Groups, NACLs, Route 53, Elastic Load Balancer</strong></p></div>
+      <div class="card skill"><h3>🔐 Security & Operations</h3><p><strong>IAM, KMS, WAF, GuardDuty, Secrets Manager, Security Hub, ServiceNow, ITIL Incident / Problem / Change Management</strong></p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="section-kicker">Professional Experience</p>
+    <h2>Work Experience</h2>
+    <div class="card">
+      <div class="job-head">
+        <h3>Cloud Engineer — Tata Consultancy Services (TCS)</h3>
+        <span class="date">May 2024 – Present</span>
+      </div>
+      <ul>
+        <li>Managed AWS production infrastructure — EC2, VPC, IAM, Route 53, Auto Scaling Groups and Elastic Load Balancers — sustaining 99.9% application uptime and improving server efficiency by 20%.</li>
+        <li>Automated routine operational tasks and infrastructure provisioning using AWS Systems Manager (Patch Manager, Session Manager, Run Command), AWS Lambda and Bash scripting, with basic Python for supporting scripts.</li>
+        <li>Supported CI/CD deployment activities and production infrastructure changes using AWS CodePipeline, CodeBuild and CodeDeploy, with working exposure to Jenkins and GitHub Actions.</li>
+        <li>Assisted with containerized workloads on Amazon EKS and ECS, including basic Docker-based deployment and troubleshooting for microservices.</li>
+        <li>Configured and secured VPC environments including subnets, security groups, NACLs, NAT Gateways and Route 53 DNS routing.</li>
+        <li>Monitored infrastructure health using CloudWatch dashboards, alarms and SNS alerting; resolved production incidents within SLA and improved overall system performance by 25%.</li>
+        <li>Administered Amazon RDS and DynamoDB with automated backups using AWS Backup and performance tuning, cutting system downtime by 30%.</li>
+        <li>Executed infrastructure changes through ServiceNow Change Management following ITIL practices and handled Incident, Problem and Change Management while maintaining SLA compliance.</li>
+        <li>Managed IAM policies, roles and API Gateway integrations to enforce cloud security best practices.</li>
+        <li>Delivered L2 Linux system administration including server troubleshooting, performance tuning and patch validation using Bash and Git/GitHub.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <p class="section-kicker">Cloud Engineering Work</p>
+    <h2>Projects & Work Highlights</h2>
+    <div class="grid">
+      <div class="card project">
+        <h3>AWS Infrastructure Automation & IaC</h3>
+        <p>Automated infrastructure provisioning and operational workflows using AWS CloudFormation, AWS Systems Manager and Bash scripting.</p>
+        <div class="tags"><span class="tag">AWS</span><span class="tag">CloudFormation</span><span class="tag">Systems Manager</span><span class="tag">Bash</span></div>
+      </div>
+      <div class="card project">
+        <h3>AWS Monitoring & Incident Automation</h3>
+        <p>Built CloudWatch dashboards, alarms, SNS alerts and automated runbooks to improve infrastructure monitoring and production incident response.</p>
+        <div class="tags"><span class="tag">CloudWatch</span><span class="tag">SNS</span><span class="tag">Lambda</span><span class="tag">Monitoring</span></div>
+      </div>
+      <div class="card project">
+        <h3>Containerized Workloads on Amazon EKS</h3>
+        <p>Supported containerized workloads on Amazon EKS and ECS, including Docker-based deployment and troubleshooting for microservices.</p>
+        <div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">EKS</span><span class="tag">ECS</span></div>
+      </div>
+      <div class="card project">
+        <h3>AWS CI/CD Deployment Support</h3>
+        <p>Supported CI/CD deployment activities and production infrastructure changes using CodePipeline, CodeBuild and CodeDeploy, with Jenkins and GitHub Actions exposure.</p>
+        <div class="tags"><span class="tag">CI/CD</span><span class="tag">CodePipeline</span><span class="tag">CodeBuild</span><span class="tag">CodeDeploy</span><span class="tag">Jenkins</span></div>
+      </div>
+      <div class="card project">
+        <h3>AWS Data & ETL Pipeline</h3>
+        <p>Built and maintained ETL pipelines using AWS EMR, Glue and S3-based storage design to support downstream reporting and analytics workloads.</p>
+        <div class="tags"><span class="tag">EMR</span><span class="tag">Glue</span><span class="tag">S3</span><span class="tag">ETL</span></div>
+      </div>
+      <div class="card project">
+        <h3>Linux Administration & Performance</h3>
+        <p>Supported L2 Linux administration, server troubleshooting, patch validation and performance-tuning workflows using Bash and Git/GitHub.</p>
+        <div class="tags"><span class="tag">Linux</span><span class="tag">Bash</span><span class="tag">Git</span><span class="tag">GitHub</span></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:17px">
+      <strong>Project note:</strong> These work highlights are based on responsibilities and key contributions described in my professional experience; they are not presented as separate personal projects.
+    </div>
+  </section>
+
+  <section id="contributions">
+    <p class="section-kicker">Results</p>
+    <h2>Key Contributions</h2>
+    <div class="card">
+      <ul>
+        <li>Rightsized production resources and automated provisioning with CloudFormation (IaC), strengthening change-management workflows and improving server efficiency by 20%.</li>
+        <li>Built CloudWatch dashboards, SNS alerts and automated runbooks that reduced system downtime by 30%.</li>
+        <li>Implemented Linux performance-tuning and L2 troubleshooting workflows that lifted overall system performance by 25%.</li>
+        <li>Built and maintained ETL pipelines using AWS EMR, Glue and S3-based storage design to support downstream reporting and analytics workloads.</li>
+        <li>Managed IAM policies and roles alongside ServiceNow-driven Incident, Problem and Change Management to keep production changes compliant and audit-ready.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <p class="section-kicker">Credentials</p>
+    <h2>Certifications</h2>
+    <div class="cert-list">
+      <div class="cert">
+        <strong>AWS Certified Solutions Architect – Associate (SAA-C03)</strong>
+        <span>Completed, July 2026</span>
+      </div>
+      <div class="cert">
+        <strong>Certified Linux Administrator</strong>
+        <span>Completed</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <p class="section-kicker">Academic Background</p>
+    <h2>Education</h2>
+    <div class="card">
+      <strong>Bachelor of Technology (B.Tech), Computer Science</strong><br>
+      University Institute of Technology, Bhopal — 2023
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="section-kicker">Connect</p>
+    <h2>Contact & Profiles</h2>
+    <div class="links">
+      <a class="link-card" href="mailto:n.namdev.nn@gmail.com"><strong>Email</strong><span>n.namdev.nn@gmail.com</span></a>
+      <a class="link-card" href="https://github.com/nknamdev" target="_blank" rel="noopener"><strong>GitHub</strong><span>github.com/nknamdev</span></a>
+      <a class="link-card" href="https://www.linkedin.com/in/neetesh-kumar-namdev-56706517a/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>linkedin.com/in/neetesh-kumar-namdev-56706517a</span></a>
+      <a class="link-card" href="Neetesh_Kumar_Namdev_Cloud_DevOps_Resume.pdf" target="_blank" rel="noopener"><strong>Resume PDF</strong><span>View or download the current resume</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Neetesh Kumar Namdev</span>
+    <span>AWS Cloud Engineer • DevOps • Cloud Operations</span>
+  </div>
+</footer>
+
+</body>
+</html>
