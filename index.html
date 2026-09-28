@@ -2,24 +2,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
 
-  <title>Neetesh Kumar Namdev | AWS Cloud Engineer</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Neetesh Kumar Namdev - AWS Cloud Engineer, AWS Certified Solutions Architect and Cloud Infrastructure Professional."
-  />
+    content="Neetesh Kumar Namdev - AWS Cloud Engineer specializing in AWS infrastructure, networking, security, Linux, monitoring, troubleshooting and production cloud operations."
+  >
+
+  <meta
+    name="keywords"
+    content="AWS Cloud Engineer, AWS, Cloud Engineer, AWS Solutions Architect, AWS Security, AWS Networking, Linux, DevOps, Cloud Infrastructure, TCS"
+  >
+
+  <meta name="author" content="Neetesh Kumar Namdev">
+
+  <title>
+    Neetesh Kumar Namdev | AWS Cloud Engineer
+  </title>
+
+
+  <!-- Google Font -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
-  />
+  >
+
+
+  <!-- Icons -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
 
   <style>
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -27,627 +63,1751 @@
       scroll-behavior: smooth;
     }
 
+
     :root {
-      --bg: #070b14;
-      --card: #0d1320;
-      --card2: #111827;
+
+      --background: #050816;
+
+      --background-secondary: #080d1c;
+
+      --card: rgba(15, 23, 42, 0.72);
+
+      --card-hover: rgba(20, 30, 52, 0.9);
+
       --text: #f8fafc;
+
+      --text-secondary: #cbd5e1;
+
       --muted: #94a3b8;
+
       --border: rgba(148, 163, 184, 0.15);
+
       --blue: #38bdf8;
+
+      --blue-dark: #0284c7;
+
       --purple: #8b5cf6;
+
       --green: #22c55e;
+
+      --orange: #f59e0b;
+
+      --red: #ef4444;
+
+      --gradient:
+        linear-gradient(
+          135deg,
+          #38bdf8,
+          #8b5cf6
+        );
     }
+
 
     body {
-      font-family: "Inter", sans-serif;
+
+      font-family:
+        "Inter",
+        sans-serif;
+
       background:
-        radial-gradient(circle at 10% 10%, rgba(56,189,248,.12), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(139,92,246,.12), transparent 30%),
-        var(--bg);
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(56, 189, 248, 0.12),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(139, 92, 246, 0.12),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 50% 90%,
+          rgba(34, 197, 94, 0.05),
+          transparent 30%
+        ),
+
+        var(--background);
+
       color: var(--text);
+
       line-height: 1.7;
+
+      overflow-x: hidden;
     }
 
+
+    body::before {
+
+      content: "";
+
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px
+        );
+
+      background-size: 50px 50px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent
+        );
+
+      z-index: -1;
+    }
+
+
     a {
+
       color: inherit;
+
       text-decoration: none;
     }
 
-    /* NAVBAR */
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      backdrop-filter: blur(14px);
-      background: rgba(7, 11, 20, 0.75);
-      border-bottom: 1px solid var(--border);
+    img {
+
+      max-width: 100%;
     }
 
-    .nav-container {
+
+    .container {
+
+      width: 100%;
+
       max-width: 1150px;
+
       margin: auto;
-      padding: 18px 25px;
+
+      padding-left: 25px;
+
+      padding-right: 25px;
+    }
+
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    nav {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      z-index: 999;
+
+      backdrop-filter: blur(18px);
+
+      -webkit-backdrop-filter: blur(18px);
+
+      background:
+        rgba(5, 8, 22, 0.78);
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .nav-container {
+
+      max-width: 1150px;
+
+      margin: auto;
+
+      padding:
+        17px 25px;
+
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
     }
 
+
     .logo {
-      font-size: 20px;
+
+      font-size: 22px;
+
       font-weight: 800;
-      letter-spacing: -0.5px;
+
+      letter-spacing: -1px;
     }
 
+
     .logo span {
+
       color: var(--blue);
     }
 
+
     .nav-links {
+
       display: flex;
+
+      align-items: center;
+
       gap: 25px;
+
       list-style: none;
     }
 
+
     .nav-links a {
+
       color: var(--muted);
-      font-size: 14px;
-      transition: .3s;
+
+      font-size: 13px;
+
+      font-weight: 500;
+
+      transition: 0.3s;
     }
 
+
     .nav-links a:hover {
+
       color: var(--blue);
     }
 
-    /* HERO */
+
+    .mobile-menu {
+
+      display: none;
+
+      font-size: 22px;
+
+      cursor: pointer;
+
+      color: var(--text);
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
 
     .hero {
+
       max-width: 1150px;
+
       min-height: 100vh;
+
       margin: auto;
-      padding: 160px 25px 80px;
+
+      padding:
+        150px 25px 90px;
+
       display: grid;
-      grid-template-columns: 1.3fr .7fr;
+
+      grid-template-columns:
+        1.25fr
+        0.75fr;
+
       gap: 60px;
+
       align-items: center;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 7px 13px;
-      border: 1px solid rgba(56,189,248,.3);
-      background: rgba(56,189,248,.07);
+
+    .availability {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding:
+        7px 13px;
+
+      border:
+        1px solid
+        rgba(34, 197, 94, 0.25);
+
+      background:
+        rgba(34, 197, 94, 0.07);
+
       border-radius: 30px;
-      color: var(--blue);
-      font-size: 13px;
+
+      color: #86efac;
+
+      font-size: 12px;
+
       margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.05;
-      letter-spacing: -3px;
+
+    .status-dot {
+
+      width: 7px;
+
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      box-shadow:
+        0 0 10px
+        rgba(34, 197, 94, 0.8);
+    }
+
+
+    .hero h1 {
+
+      font-size:
+        clamp(
+          42px,
+          6vw,
+          72px
+        );
+
+      line-height: 1.04;
+
+      letter-spacing: -3.5px;
+
       margin-bottom: 22px;
     }
 
-    h1 span {
-      background: linear-gradient(90deg, var(--blue), var(--purple));
+
+    .gradient-text {
+
+      background:
+        var(--gradient);
+
       -webkit-background-clip: text;
+
+      background-clip: text;
+
       -webkit-text-fill-color: transparent;
     }
 
+
+    .hero-title {
+
+      color: var(--blue);
+
+      font-size: 18px;
+
+      font-weight: 600;
+
+      margin-bottom: 20px;
+    }
+
+
     .hero-description {
-      max-width: 650px;
+
+      max-width: 670px;
+
       color: var(--muted);
-      font-size: 17px;
+
+      font-size: 16px;
+
       margin-bottom: 30px;
     }
 
+
+    .hero-description strong {
+
+      color: var(--text-secondary);
+    }
+
+
     .buttons {
+
       display: flex;
-      gap: 15px;
+
+      gap: 12px;
+
       flex-wrap: wrap;
     }
+
 
     .btn {
-      padding: 12px 20px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      padding:
+        11px 18px;
+
+      border-radius: 9px;
+
+      border:
+        1px solid var(--border);
+
+      color: var(--text);
+
+      font-size: 13px;
+
       font-weight: 600;
-      font-size: 14px;
-      transition: .3s;
+
+      transition: 0.3s;
+
+      cursor: pointer;
     }
+
 
     .btn-primary {
-      background: linear-gradient(90deg, #0284c7, #7c3aed);
+
+      background:
+        linear-gradient(
+          90deg,
+          #0284c7,
+          #7c3aed
+        );
+
       border: none;
+
+      box-shadow:
+        0 10px 30px
+        rgba(56, 189, 248, 0.12);
     }
+
 
     .btn:hover {
-      transform: translateY(-3px);
+
+      transform:
+        translateY(-3px);
+
+      border-color:
+        rgba(56,189,248,0.4);
     }
 
-    /* TERMINAL */
+
+    /* =========================================================
+       TERMINAL
+    ========================================================= */
 
     .terminal {
-      background: #050812;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 25px 80px rgba(0,0,0,.4);
-    }
 
-    .terminal-header {
-      padding: 12px 15px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 7px;
-    }
+      background:
+        rgba(2, 6, 23, 0.95);
 
-    .dot {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: #475569;
-    }
+      border:
+        1px solid var(--border);
 
-    .terminal-body {
-      padding: 22px;
-      font-family: monospace;
-      font-size: 13px;
-      color: #cbd5e1;
-    }
-
-    .green {
-      color: var(--green);
-    }
-
-    .blue {
-      color: var(--blue);
-    }
-
-    .purple {
-      color: #c084fc;
-    }
-
-    /* SECTIONS */
-
-    section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 100px 25px;
-    }
-
-    .section-title {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .section-subtitle {
-      color: var(--muted);
-      margin-bottom: 45px;
-    }
-
-    /* STATS */
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .stat {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 25px;
-      border-radius: 14px;
-      text-align: center;
-    }
-
-    .stat h3 {
-      font-size: 30px;
-      color: var(--blue);
-    }
-
-    .stat p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* ABOUT */
-
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 30px;
       border-radius: 16px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 30px 90px
+        rgba(0,0,0,0.45);
     }
 
-    .card p {
-      color: var(--muted);
-    }
 
-    /* SKILLS */
+    .terminal-top {
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+      padding:
+        13px 16px;
 
-    .skill-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 25px;
-      transition: .3s;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(56,189,248,.4);
-    }
-
-    .skill-card h3 {
-      margin-bottom: 10px;
-    }
-
-    .skill-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* EXPERIENCE */
-
-    .timeline {
-      border-left: 2px solid rgba(56,189,248,.25);
-      padding-left: 30px;
-    }
-
-    .experience {
-      position: relative;
-      margin-bottom: 40px;
-    }
-
-    .experience::before {
-      content: "";
-      position: absolute;
-      width: 11px;
-      height: 11px;
-      background: var(--blue);
-      border-radius: 50%;
-      left: -37px;
-      top: 9px;
-      box-shadow: 0 0 15px var(--blue);
-    }
-
-    .experience h3 {
-      font-size: 21px;
-    }
-
-    .company {
-      color: var(--blue);
-      font-weight: 600;
-    }
-
-    .date {
-      color: #64748b;
-      font-size: 13px;
-      margin: 5px 0 15px;
-    }
-
-    .experience ul {
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    .experience li {
-      margin-bottom: 8px;
-    }
-
-    /* CERTIFICATIONS */
-
-    .certifications {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .cert {
-      padding: 25px;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      background: var(--card);
-    }
-
-    .cert-icon {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .cert h3 {
-      margin-bottom: 5px;
-    }
-
-    .cert p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* PROJECTS */
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .project {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 28px;
-      transition: .3s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
-    }
-
-    .project p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .tags {
       display: flex;
+
+      align-items: center;
+
       gap: 7px;
-      flex-wrap: wrap;
+
+      border-bottom:
+        1px solid var(--border);
     }
 
-    .tag {
-      padding: 5px 9px;
-      border-radius: 6px;
-      background: rgba(56,189,248,.08);
-      color: var(--blue);
+
+    .terminal-title {
+
+      margin-left: 8px;
+
+      color: #64748b;
+
+      font-family: monospace;
+
       font-size: 11px;
     }
 
-    /* CONTACT */
 
-    .contact {
-      text-align: center;
-      max-width: 750px;
+    .terminal-dot {
+
+      width: 10px;
+
+      height: 10px;
+
+      border-radius: 50%;
+
+      background: #475569;
     }
 
-    .contact p {
-      color: var(--muted);
-      margin-bottom: 25px;
+
+    .terminal-body {
+
+      padding: 24px;
+
+      font-family:
+        "Courier New",
+        monospace;
+
+      font-size: 12px;
+
+      line-height: 2;
     }
 
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+
+    .terminal-green {
+
+      color: #4ade80;
     }
 
-    .social {
-      padding: 10px 17px;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      color: var(--muted);
-      transition: .3s;
+
+    .terminal-blue {
+
+      color: #38bdf8;
     }
 
-    .social:hover {
+
+    .terminal-purple {
+
+      color: #c084fc;
+    }
+
+
+    .terminal-orange {
+
+      color: #fbbf24;
+    }
+
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
+
+    section {
+
+      max-width: 1150px;
+
+      margin: auto;
+
+      padding:
+        100px 25px;
+    }
+
+
+    .section-label {
+
       color: var(--blue);
-      border-color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 8px;
     }
 
-    footer {
+
+    .section-title {
+
+      font-size: 38px;
+
+      line-height: 1.2;
+
+      letter-spacing: -1.5px;
+
+      margin-bottom: 10px;
+    }
+
+
+    .section-subtitle {
+
+      color: var(--muted);
+
+      margin-bottom: 45px;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       STATS
+    ========================================================= */
+
+    .stats {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 15px;
+    }
+
+
+    .stat {
+
+      background:
+        var(--card);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 25px;
+
       text-align: center;
+
+      transition: 0.3s;
+    }
+
+
+    .stat:hover {
+
+      transform:
+        translateY(-5px);
+
+      background:
+        var(--card-hover);
+    }
+
+
+    .stat-icon {
+
+      color: var(--blue);
+
+      font-size: 20px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .stat h3 {
+
+      font-size: 30px;
+
+      line-height: 1.2;
+
+      color: var(--text);
+    }
+
+
+    .stat p {
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      margin-top: 5px;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 0.8fr;
+
+      gap: 22px;
+    }
+
+
+    .card {
+
+      background:
+        var(--card);
+
+      border:
+        1px solid var(--border);
+
       padding: 30px;
-      border-top: 1px solid var(--border);
-      color: #64748b;
+
+      border-radius: 16px;
+
+      transition: 0.3s;
+    }
+
+
+    .card:hover {
+
+      border-color:
+        rgba(56,189,248,0.22);
+
+      background:
+        var(--card-hover);
+    }
+
+
+    .card h3 {
+
+      margin-bottom: 10px;
+    }
+
+
+    .card p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    .highlight {
+
+      color: var(--blue);
+
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 17px;
+    }
+
+
+    .skill-card {
+
+      background:
+        var(--card);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 25px;
+
+      transition: 0.3s;
+    }
+
+
+    .skill-card:hover {
+
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(56,189,248,0.35);
+    }
+
+
+    .skill-icon {
+
+      width: 40px;
+
+      height: 40px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background:
+        rgba(56,189,248,0.08);
+
+      color: var(--blue);
+
+      margin-bottom: 15px;
+    }
+
+
+    .skill-card h3 {
+
+      font-size: 17px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .skill-card p {
+
+      color: var(--muted);
+
       font-size: 13px;
     }
 
-    /* MOBILE */
 
-    @media (max-width: 800px) {
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .timeline {
+
+      border-left:
+        2px solid
+        rgba(56,189,248,0.2);
+
+      padding-left: 30px;
+    }
+
+
+    .experience {
+
+      position: relative;
+
+      margin-bottom: 20px;
+
+      background:
+        var(--card);
+
+      border:
+        1px solid var(--border);
+
+      padding: 30px;
+
+      border-radius: 15px;
+    }
+
+
+    .experience::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 12px;
+
+      height: 12px;
+
+      background: var(--blue);
+
+      border-radius: 50%;
+
+      left: -37px;
+
+      top: 35px;
+
+      box-shadow:
+        0 0 15px
+        rgba(56,189,248,0.8);
+    }
+
+
+    .experience h3 {
+
+      font-size: 22px;
+
+      margin-bottom: 3px;
+    }
+
+
+    .company {
+
+      color: var(--blue);
+
+      font-size: 14px;
+
+      font-weight: 600;
+    }
+
+
+    .date {
+
+      color: #64748b;
+
+      font-size: 12px;
+
+      margin:
+        5px 0 20px;
+    }
+
+
+    .experience ul {
+
+      padding-left: 19px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+
+    .experience li {
+
+      margin-bottom: 10px;
+
+      padding-left: 4px;
+    }
+
+
+    .experience li strong {
+
+      color: var(--text-secondary);
+    }
+
+
+    /* =========================================================
+       CERTIFICATIONS
+    ========================================================= */
+
+    .certifications {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .cert {
+
+      background:
+        var(--card);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 28px;
+
+      transition: 0.3s;
+    }
+
+
+    .cert:hover {
+
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(139,92,246,0.35);
+    }
+
+
+    .cert-icon {
+
+      width: 45px;
+
+      height: 45px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 12px;
+
+      background:
+        rgba(139,92,246,0.1);
+
+      color: #c084fc;
+
+      font-size: 19px;
+
+      margin-bottom: 15px;
+    }
+
+
+    .cert h3 {
+
+      font-size: 16px;
+
+      margin-bottom: 5px;
+    }
+
+
+    .cert-name {
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      margin-bottom: 10px;
+    }
+
+
+    .cert p {
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+
+    /* =========================================================
+       PROJECTS
+    ========================================================= */
+
+    .projects {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .project {
+
+      background:
+        var(--card);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 28px;
+
+      transition: 0.3s;
+    }
+
+
+    .project:hover {
+
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(56,189,248,0.3);
+    }
+
+
+    .project-top {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      margin-bottom: 12px;
+    }
+
+
+    .project-icon {
+
+      width: 40px;
+
+      height: 40px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      background:
+        rgba(56,189,248,0.08);
+
+      border-radius: 10px;
+
+      color: var(--blue);
+    }
+
+
+    .project h3 {
+
+      font-size: 17px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .project p {
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      margin-bottom: 17px;
+    }
+
+
+    .tags {
+
+      display: flex;
+
+      gap: 7px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .tag {
+
+      padding:
+        4px 8px;
+
+      border-radius: 5px;
+
+      background:
+        rgba(56,189,248,0.07);
+
+      color: var(--blue);
+
+      font-size: 10px;
+
+      font-weight: 500;
+    }
+
+
+    /* =========================================================
+       EDUCATION
+    ========================================================= */
+
+    .education-card {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 20px;
+    }
+
+
+    .education-icon {
+
+      min-width: 48px;
+
+      height: 48px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 12px;
+
+      background:
+        rgba(56,189,248,0.08);
+
+      color: var(--blue);
+    }
+
+
+    .education-card h3 {
+
+      margin-bottom: 3px;
+    }
+
+
+    .education-card p {
+
+      margin: 0;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+
+      text-align: center;
+
+      max-width: 800px;
+
+      margin: auto;
+    }
+
+
+    .contact .section-subtitle {
+
+      max-width: 650px;
+
+      margin-left: auto;
+
+      margin-right: auto;
+    }
+
+
+    .socials {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .social {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding:
+        10px 16px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 9px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      transition: 0.3s;
+    }
+
+
+    .social:hover {
+
+      color: var(--blue);
+
+      border-color: var(--blue);
+
+      transform:
+        translateY(-3px);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+
+      text-align: center;
+
+      padding: 30px 20px;
+
+      border-top:
+        1px solid var(--border);
+
+      color: #64748b;
+
+      font-size: 12px;
+    }
+
+
+    footer span {
+
+      color: var(--blue);
+    }
+
+
+    /* =========================================================
+       SCROLL ANIMATION
+    ========================================================= */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform:
+        translateY(25px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+
+    .reveal.active {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 850px) {
 
       .nav-links {
+
         display: none;
+
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        width: 100%;
+
+        background:
+          rgba(5,8,22,0.98);
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        border-bottom:
+          1px solid var(--border);
       }
+
+
+      .nav-links.active {
+
+        display: flex;
+      }
+
+
+      .mobile-menu {
+
+        display: block;
+      }
+
 
       .hero {
+
         grid-template-columns: 1fr;
-        padding-top: 130px;
+
+        padding-top: 125px;
       }
+
 
       .stats {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
-      .about,
+
+      .about {
+
+        grid-template-columns: 1fr;
+      }
+
+
       .skills-grid,
       .certifications,
       .projects {
+
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        font-size: 45px;
-      }
     }
 
-    @media (max-width: 450px) {
+
+    @media (max-width: 500px) {
+
+      .container,
+      .hero,
+      section {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+      }
+
 
       .stats {
+
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 70px 18px;
+
+      .hero h1 {
+
+        font-size: 45px;
+
+        letter-spacing: -2px;
       }
+
+
+      .section-title {
+
+        font-size: 31px;
+      }
+
+
+      .experience {
+
+        padding: 22px;
+      }
+
+
+      .terminal-body {
+
+        font-size: 10px;
+
+        padding: 18px;
+      }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- NAVIGATION -->
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================= -->
 
   <nav>
+
     <div class="nav-container">
 
-      <a href="#" class="logo">
+      <a
+        href="#"
+        class="logo"
+      >
         NK<span>.</span>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="#about">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills">
+            Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="#experience">
+            Experience
+          </a>
+        </li>
+
+        <li>
+          <a href="#certifications">
+            Certifications
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contact
+          </a>
+        </li>
+
       </ul>
 
+
+      <div
+        class="mobile-menu"
+        id="mobileMenu"
+      >
+
+        <i class="fa-solid fa-bars"></i>
+
+      </div>
+
     </div>
+
   </nav>
 
 
-  <!-- HERO -->
+
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
 
   <header class="hero">
 
-    <div>
 
-      <div class="badge">
-        ☁️ AWS Cloud Engineer
+    <div class="hero-content reveal">
+
+
+      <div class="availability">
+
+        <span class="status-dot"></span>
+
+        AWS Cloud Engineer
+
       </div>
 
+
+      <div class="hero-title">
+
+        AWS Cloud Infrastructure • Security • Operations
+
+      </div>
+
+
       <h1>
-        Neetesh Kumar<br>
-        <span>Namdev</span>
+
+        Neetesh Kumar
+        <br>
+
+        <span class="gradient-text">
+          Namdev
+        </span>
+
       </h1>
 
+
       <p class="hero-description">
-        AWS Cloud Engineer with 2+ years of experience managing
-        production cloud infrastructure, automation, monitoring,
-        Linux administration and ITIL-based production support.
+
+        AWS Cloud Engineer with
+        <strong>2+ years of experience</strong>
+        supporting production cloud infrastructure across
+        <strong>200+ AWS accounts and 300+ servers</strong>.
+
+        Experienced in AWS infrastructure management,
+        networking, security, monitoring, Linux administration,
+        troubleshooting and production operations.
+
       </p>
 
+
       <div class="buttons">
+
 
         <a
           href="https://github.com/nknamdev"
           target="_blank"
           class="btn btn-primary"
         >
+
+          <i class="fa-brands fa-github"></i>
+
           GitHub
+
         </a>
 
+
         <a
-          href="https://www.linkedin.com/in/neetesh-kumar-namdev-56706517a/"
+          href="https://www.linkedin.com/"
           target="_blank"
           class="btn"
         >
+
+          <i class="fa-brands fa-linkedin"></i>
+
           LinkedIn
+
         </a>
+
 
         <a
           href="mailto:n.namdev.nn@gmail.com"
           class="btn"
         >
+
+          <i class="fa-solid fa-envelope"></i>
+
           Contact Me
+
         </a>
+
 
       </div>
 
     </div>
 
 
-    <!-- TERMINAL -->
 
-    <div class="terminal">
+    <!-- =======================================================
+         TERMINAL
+    ======================================================== -->
 
-      <div class="terminal-header">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+    <div class="terminal reveal">
+
+
+      <div class="terminal-top">
+
+        <div class="terminal-dot"></div>
+
+        <div class="terminal-dot"></div>
+
+        <div class="terminal-dot"></div>
+
+        <span class="terminal-title">
+          neetesh@aws-cloud-engineer
+        </span>
+
       </div>
+
 
       <div class="terminal-body">
 
-        <p>
-          <span class="green">$</span>
+
+        <div>
+
+          <span class="terminal-green">
+            $
+          </span>
+
           whoami
-        </p>
 
-        <p class="blue">
-          neetesh@cloud-engineer
-        </p>
+        </div>
 
-        <br>
 
-        <p>
-          <span class="green">$</span>
-          aws --profile neetesh
-        </p>
+        <div class="terminal-blue">
 
-        <p class="purple">
-          AWS Solutions Architect
-        </p>
+          neetesh@aws-cloud-engineer
 
-        <p class="purple">
-          AWS AI Practitioner
-        </p>
+        </div>
+
 
         <br>
 
-        <p>
-          <span class="green">$</span>
-          kubectl get skills
-        </p>
 
-        <p>
+        <div>
+
+          <span class="terminal-green">
+            $
+          </span>
+
+          aws environment
+
+        </div>
+
+
+        <div class="terminal-purple">
+
+          200+ AWS Accounts
+
+        </div>
+
+
+        <div class="terminal-purple">
+
+          300+ Production Servers
+
+        </div>
+
+
+        <br>
+
+
+        <div>
+
+          <span class="terminal-green">
+            $
+          </span>
+
+          aws services
+
+        </div>
+
+
+        <div>
+
           EC2 • VPC • IAM • S3
-        </p>
 
-        <p>
-          CloudFormation • Linux
-        </p>
+        </div>
 
-        <p>
-          CloudWatch • Terraform*
-        </p>
+
+        <div>
+
+          RDS • EBS • Lambda • ELB
+
+        </div>
+
+
+        <div>
+
+          Route53 • CloudWatch • SSM
+
+        </div>
+
 
         <br>
 
-        <p>
-          <span class="green">$</span>
-          status
-        </p>
 
-        <p class="green">
-          ● Available for opportunities
-        </p>
+        <div>
+
+          <span class="terminal-green">
+            $
+          </span>
+
+          security
+
+        </div>
+
+
+        <div class="terminal-orange">
+
+          IAM • SG • NACL • CloudTrail
+
+        </div>
+
+
+        <br>
+
+
+        <div>
+
+          <span class="terminal-green">
+            $
+          </span>
+
+          status
+
+        </div>
+
+
+        <div class="terminal-green">
+
+          ● Production Cloud Operations
+
+        </div>
+
 
       </div>
 
@@ -656,254 +1816,784 @@
   </header>
 
 
-  <!-- STATS -->
 
-  <section>
+  <!-- =========================================================
+       STATS
+  ========================================================= -->
+
+  <section class="reveal">
+
 
     <div class="stats">
 
-      <div class="stat">
-        <h3>2+</h3>
-        <p>Years AWS Experience</p>
-      </div>
 
       <div class="stat">
-        <h3>30%</h3>
-        <p>Downtime Reduction</p>
+
+        <div class="stat-icon">
+
+          <i class="fa-solid fa-cloud"></i>
+
+        </div>
+
+        <h3>
+          200+
+        </h3>
+
+        <p>
+          AWS Accounts Supported
+        </p>
+
       </div>
 
-      <div class="stat">
-        <h3>20%</h3>
-        <p>Infrastructure Efficiency</p>
-      </div>
 
       <div class="stat">
-        <h3>25%</h3>
-        <p>Performance Improvement</p>
+
+        <div class="stat-icon">
+
+          <i class="fa-solid fa-server"></i>
+
+        </div>
+
+        <h3>
+          300+
+        </h3>
+
+        <p>
+          Production Servers
+        </p>
+
       </div>
+
+
+      <div class="stat">
+
+        <div class="stat-icon">
+
+          <i class="fa-solid fa-network-wired"></i>
+
+        </div>
+
+        <h3>
+          AWS
+        </h3>
+
+        <p>
+          Cloud Infrastructure
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div class="stat-icon">
+
+          <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <h3>
+          Cloud
+        </h3>
+
+        <p>
+          Security & Operations
+        </p>
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- ABOUT -->
 
-  <section id="about">
+  <!-- =========================================================
+       ABOUT
+  ========================================================= -->
 
-    <h2 class="section-title">About Me</h2>
+  <section id="about" class="reveal">
+
+
+    <div class="section-label">
+      About Me
+    </div>
+
+
+    <h2 class="section-title">
+      Cloud Engineer focused on reliable infrastructure
+    </h2>
+
 
     <p class="section-subtitle">
-      Cloud infrastructure • Automation • Production Support
+
+      AWS Cloud Engineering • Infrastructure • Networking • Security
+
     </p>
+
 
     <div class="about">
 
-      <div class="card">
-
-        <p>
-          I am an AWS Cloud Engineer with hands-on experience
-          managing production AWS infrastructure at Tata Consultancy
-          Services (TCS).
-        </p>
-
-        <br>
-
-        <p>
-          My work focuses on reliable cloud infrastructure,
-          automation, monitoring, troubleshooting and production
-          support.
-        </p>
-
-        <br>
-
-        <p>
-          I enjoy solving infrastructure problems and continuously
-          building my skills across Cloud, DevOps and automation.
-        </p>
-
-      </div>
 
       <div class="card">
 
-        <h3>Currently Learning</h3>
+
+        <p>
+
+          I am an AWS Cloud Engineer with
+          <span class="highlight">
+            2+ years of hands-on experience
+          </span>
+          supporting production cloud infrastructure
+          at Tata Consultancy Services (TCS).
+
+        </p>
+
 
         <br>
 
-        <p>
-          Docker
-        </p>
 
         <p>
-          Kubernetes
+
+          I support AWS environments spanning
+          <span class="highlight">
+            200+ AWS accounts and 300+ servers
+          </span>,
+          with responsibilities covering cloud infrastructure,
+          server operations, monitoring, networking,
+          security, troubleshooting and production support.
+
         </p>
 
-        <p>
-          Terraform
-        </p>
+
+        <br>
+
 
         <p>
-          AWS CI/CD
+
+          My day-to-day work involves troubleshooting
+          infrastructure and connectivity issues,
+          managing EC2 environments, monitoring AWS resources,
+          handling IAM access, performing patching activities
+          and supporting production incidents.
+
         </p>
 
+
+        <br>
+
+
         <p>
-          DevOps
+
+          I follow ITIL-based processes for Incident,
+          Change and Problem Management and collaborate
+          with application, network, database and security
+          teams to resolve production issues.
+
         </p>
+
 
       </div>
+
+
+
+      <div class="card">
+
+
+        <h3>
+          What I Work On
+        </h3>
+
+
+        <br>
+
+
+        <p>
+          ☁️ AWS Infrastructure Management
+        </p>
+
+        <p>
+          🖥️ EC2 & Server Administration
+        </p>
+
+        <p>
+          🌐 VPC & Network Troubleshooting
+        </p>
+
+        <p>
+          🔐 IAM & Cloud Security
+        </p>
+
+        <p>
+          📊 CloudWatch Monitoring
+        </p>
+
+        <p>
+          🔧 Production Troubleshooting
+        </p>
+
+        <p>
+          🔄 Patch Management
+        </p>
+
+        <p>
+          ⚙️ AWS Systems Manager
+        </p>
+
+        <p>
+          📋 ITIL / ServiceNow
+        </p>
+
+        <p>
+          🚀 Cloud Automation
+        </p>
+
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- SKILLS -->
 
-  <section id="skills">
+  <!-- =========================================================
+       SKILLS
+  ========================================================= -->
 
-    <h2 class="section-title">Technical Skills</h2>
+  <section id="skills" class="reveal">
+
+
+    <div class="section-label">
+      Technical Skills
+    </div>
+
+
+    <h2 class="section-title">
+      Cloud & Infrastructure
+    </h2>
+
 
     <p class="section-subtitle">
-      Technologies and tools I work with
+
+      Technologies and operational capabilities
+
     </p>
+
 
     <div class="skills-grid">
 
+
+      <!-- AWS -->
+
       <div class="skill-card">
 
-        <h3>☁️ AWS Cloud</h3>
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-cloud"></i>
+
+        </div>
+
+
+        <h3>
+          AWS Cloud
+        </h3>
+
 
         <p>
-          EC2, VPC, IAM, S3, RDS, Route 53,
-          Auto Scaling, ELB, Lambda, CloudWatch,
-          AWS CLI
+
+          EC2, S3, EBS, RDS, Lambda, IAM,
+          VPC, Route 53, Elastic Load Balancing,
+          Auto Scaling, CloudWatch, AWS Systems Manager,
+          CloudFormation and AWS CLI.
+
         </p>
 
       </div>
 
 
+
+      <!-- Infrastructure -->
+
       <div class="skill-card">
 
-        <h3>🔐 Networking & Security</h3>
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-server"></i>
+
+        </div>
+
+
+        <h3>
+          Infrastructure Management
+        </h3>
+
 
         <p>
-          VPC, Subnets, Route Tables, IGW/NAT,
-          Security Groups, NACLs, DNS, IAM,
-          Secrets Manager, CloudTrail, AWS Config
+
+          Production EC2 infrastructure,
+          server lifecycle management, AMI management,
+          EBS volumes, instance recovery,
+          capacity monitoring and cloud resource operations.
+
         </p>
 
       </div>
 
 
+
+      <!-- Networking -->
+
       <div class="skill-card">
 
-        <h3>⚙️ Infrastructure & Automation</h3>
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-network-wired"></i>
+
+        </div>
+
+
+        <h3>
+          Networking & Troubleshooting
+        </h3>
+
 
         <p>
-          AWS CloudFormation, Systems Manager,
-          Bash/Shell scripting and Python basics
+
+          VPC, public and private subnets,
+          route tables, Internet Gateway,
+          NAT Gateway, Security Groups,
+          Network ACLs, DNS, Route 53,
+          Load Balancers and connectivity troubleshooting.
+
         </p>
 
       </div>
 
 
+
+      <!-- Security -->
+
       <div class="skill-card">
 
-        <h3>📊 Monitoring & Logging</h3>
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+
+        <h3>
+          Cloud Security
+        </h3>
+
 
         <p>
-          CloudWatch, CloudTrail, AWS Config,
-          SNS, dashboards and alarms
+
+          IAM users, roles and policies,
+          least-privilege access,
+          Security Groups, NACLs,
+          CloudTrail, AWS Config,
+          access control and secure network configuration.
+
         </p>
 
       </div>
 
 
+
+      <!-- Monitoring -->
+
       <div class="skill-card">
 
-        <h3>🐧 Linux</h3>
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-chart-line"></i>
+
+        </div>
+
+
+        <h3>
+          Monitoring & Logging
+        </h3>
+
 
         <p>
-          Amazon Linux, Ubuntu, performance tuning,
-          patch management and troubleshooting
+
+          Amazon CloudWatch, alarms,
+          dashboards, CPU and memory monitoring,
+          disk utilization, log analysis,
+          SNS notifications and infrastructure alerting.
+
         </p>
 
       </div>
 
 
+
+      <!-- Linux -->
+
       <div class="skill-card">
 
-        <h3>🛠️ ITSM & Production Support</h3>
+        <div class="skill-icon">
+
+          <i class="fa-brands fa-linux"></i>
+
+        </div>
+
+
+        <h3>
+          Linux Administration
+        </h3>
+
 
         <p>
-          ServiceNow, ITIL, Incident Management,
-          Problem Management, Change Management,
-          RCA and SLA Management
+
+          Amazon Linux, Ubuntu,
+          system health checks, processes,
+          services, logs, permissions,
+          storage, patching and performance troubleshooting.
+
         </p>
 
       </div>
+
+
+
+      <!-- SSM -->
+
+      <div class="skill-card">
+
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-terminal"></i>
+
+        </div>
+
+
+        <h3>
+          AWS Systems Manager
+        </h3>
+
+
+        <p>
+
+          Session Manager, Run Command,
+          Patch Manager, SSM Agent troubleshooting,
+          instance connectivity and centralized
+          server operations.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- ITSM -->
+
+      <div class="skill-card">
+
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-ticket"></i>
+
+        </div>
+
+
+        <h3>
+          ITSM & Production Support
+        </h3>
+
+
+        <p>
+
+          ServiceNow, Incident Management,
+          Change Management, Problem Management,
+          Root Cause Analysis, SLA management
+          and production support.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- Automation -->
+
+      <div class="skill-card">
+
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-gears"></i>
+
+        </div>
+
+
+        <h3>
+          Automation
+        </h3>
+
+
+        <p>
+
+          AWS CLI, Bash/Shell scripting,
+          CloudFormation, Systems Manager automation
+          and operational automation.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- DevOps -->
+
+      <div class="skill-card">
+
+        <div class="skill-icon">
+
+          <i class="fa-solid fa-code-branch"></i>
+
+        </div>
+
+
+        <h3>
+          DevOps Fundamentals
+        </h3>
+
+
+        <p>
+
+          Git, GitHub, Docker, Kubernetes,
+          Terraform and CI/CD fundamentals
+          with focus on AWS cloud infrastructure.
+
+        </p>
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- EXPERIENCE -->
 
-  <section id="experience">
+  <!-- =========================================================
+       EXPERIENCE
+  ========================================================= -->
 
-    <h2 class="section-title">Experience</h2>
+  <section id="experience" class="reveal">
+
+
+    <div class="section-label">
+      Experience
+    </div>
+
+
+    <h2 class="section-title">
+      Professional Experience
+    </h2>
+
 
     <p class="section-subtitle">
-      Professional experience
+
+      AWS Cloud Engineering & Production Infrastructure
+
     </p>
+
 
     <div class="timeline">
 
+
       <div class="experience">
 
-        <h3>Cloud Engineer</h3>
+
+        <h3>
+          Cloud Engineer
+        </h3>
+
 
         <div class="company">
           Tata Consultancy Services (TCS)
         </div>
 
+
         <div class="date">
-          May 2024 – Present · India
+          2024 – Present · India
         </div>
+
 
         <ul>
 
-          <li>
-            Support and manage production AWS infrastructure
-            including EC2, VPC, IAM, S3, RDS, Route 53,
-            Auto Scaling and ELB.
-          </li>
 
           <li>
-            Troubleshoot production issues and perform
-            root-cause analysis using ITIL-based processes.
+
+            Support and manage production AWS cloud
+            environments spanning
+            <strong>
+              200+ AWS accounts and 300+ servers
+            </strong>,
+            ensuring infrastructure availability,
+            reliability and operational stability.
+
           </li>
 
-          <li>
-            Configure VPC networking including subnets,
-            route tables, gateways, security groups and NACLs.
-          </li>
 
           <li>
-            Automate infrastructure operations using
-            CloudFormation, Systems Manager and scripting.
+
+            Perform day-to-day administration and
+            troubleshooting of AWS services including
+            EC2, EBS, S3, RDS, IAM, VPC, Lambda,
+            Route 53, Elastic Load Balancing and CloudWatch.
+
           </li>
 
-          <li>
-            Monitor infrastructure using CloudWatch,
-            alarms, dashboards and SNS notifications.
-          </li>
 
           <li>
-            Administer Amazon Linux and Ubuntu servers,
-            including patch validation and performance tuning.
+
+            Monitor production infrastructure using
+            Amazon CloudWatch, including CPU utilization,
+            memory, disk utilization, system health,
+            alarms, logs and performance metrics.
+
           </li>
+
+
+          <li>
+
+            Investigate and troubleshoot production incidents
+            involving EC2 instances, application connectivity,
+            CPU and memory utilization, disk space,
+            system services and server availability.
+
+          </li>
+
+
+          <li>
+
+            Troubleshoot AWS networking issues involving
+            VPCs, subnets, route tables, Internet Gateway,
+            NAT Gateway, Security Groups, Network ACLs,
+            DNS and Load Balancers.
+
+          </li>
+
+
+          <li>
+
+            Perform connectivity and DNS troubleshooting
+            for production EC2 instances, including
+            private-subnet connectivity and AWS Systems
+            Manager connectivity issues.
+
+          </li>
+
+
+          <li>
+
+            Manage IAM access and permissions using
+            users, roles and policies while following
+            least-privilege security principles.
+
+          </li>
+
+
+          <li>
+
+            Support cloud security controls involving
+            Security Groups, NACLs, IAM policies,
+            CloudTrail, AWS Config and secure network
+            configurations.
+
+          </li>
+
+
+          <li>
+
+            Perform EC2 lifecycle operations including
+            instance provisioning, AMI creation and management,
+            EBS management, instance recovery and
+            server retirement activities.
+
+          </li>
+
+
+          <li>
+
+            Perform Linux server troubleshooting including
+            CPU, memory, disk, process, service,
+            connectivity and operating-system issues.
+
+          </li>
+
+
+          <li>
+
+            Support AWS Systems Manager operations including
+            Session Manager, Run Command and Patch Manager
+            for centralized server administration.
+
+          </li>
+
+
+          <li>
+
+            Perform production server patching activities,
+            validate post-patching health and troubleshoot
+            SSM connectivity and system service issues.
+
+          </li>
+
+
+          <li>
+
+            Analyze infrastructure alarms and alerts,
+            perform initial investigation, identify probable
+            root causes and coordinate resolution with
+            relevant technical teams.
+
+          </li>
+
+
+          <li>
+
+            Implement operational automation using
+            AWS services, CloudFormation, AWS Systems Manager,
+            AWS CLI and scripting to reduce repetitive
+            manual activities.
+
+          </li>
+
+
+          <li>
+
+            Work with ServiceNow for Incident, Change
+            and Problem Management while following
+            ITIL-based production support processes.
+
+          </li>
+
+
+          <li>
+
+            Participate in Root Cause Analysis (RCA)
+            for recurring infrastructure issues and
+            contribute to preventive actions.
+
+          </li>
+
+
+          <li>
+
+            Collaborate with application, database,
+            network, security and infrastructure teams
+            to resolve cross-functional production issues.
+
+          </li>
+
 
         </ul>
 
@@ -914,174 +2604,547 @@
   </section>
 
 
-  <!-- CERTIFICATIONS -->
 
-  <section id="certifications">
+  <!-- =========================================================
+       CERTIFICATIONS
+  ========================================================= -->
 
-    <h2 class="section-title">Certifications</h2>
+  <section id="certifications" class="reveal">
+
+
+    <div class="section-label">
+      Certifications
+    </div>
+
+
+    <h2 class="section-title">
+      Professional Certifications
+    </h2>
+
 
     <p class="section-subtitle">
-      Professional credentials
+
+      AWS Cloud, AI and Linux credentials
+
     </p>
+
 
     <div class="certifications">
 
+
+      <!-- AWS SAA -->
+
       <div class="cert">
 
-        <div class="cert-icon">🏆</div>
+
+        <div class="cert-icon">
+
+          <i class="fa-brands fa-aws"></i>
+
+        </div>
+
 
         <h3>
-          AWS Certified Solutions Architect – Associate
+
+          AWS Certified
+          Solutions Architect – Associate
+
         </h3>
 
+
+        <div class="cert-name">
+          AWS SAA-C03
+        </div>
+
+
         <p>
-          SAA-C03 · July 2026
+
+          Demonstrates knowledge of designing secure,
+          resilient and cost-optimized architectures
+          on AWS, including compute, storage,
+          networking, databases, security,
+          monitoring and high availability.
+
         </p>
 
       </div>
 
 
+
+      <!-- AWS AI -->
+
       <div class="cert">
 
-        <div class="cert-icon">🤖</div>
+
+        <div class="cert-icon">
+
+          <i class="fa-solid fa-robot"></i>
+
+        </div>
+
 
         <h3>
-          AWS Certified AI Practitioner
+
+          AWS Certified
+          AI Practitioner
+
         </h3>
 
+
+        <div class="cert-name">
+          AWS AIF-C01
+        </div>
+
+
         <p>
-          AIF-C01 · August 2026
+
+          Foundational knowledge of AI and machine
+          learning concepts, generative AI,
+          responsible AI and AWS AI technologies.
+
         </p>
 
       </div>
 
 
+
+      <!-- Linux -->
+
       <div class="cert">
 
-        <div class="cert-icon">🐧</div>
+
+        <div class="cert-icon">
+
+          <i class="fa-brands fa-linux"></i>
+
+        </div>
+
 
         <h3>
-          Certified Linux Administrator
+
+          Linux Administrator
+
         </h3>
 
+
+        <div class="cert-name">
+          Linux Administration
+        </div>
+
+
         <p>
-          2024
+
+          Knowledge of Linux system administration,
+          command-line operations, processes,
+          services, permissions, storage and
+          server troubleshooting.
+
         </p>
 
       </div>
 
 
+
+      <!-- Cloud -->
+
       <div class="cert">
 
-        <div class="cert-icon">☁️</div>
+
+        <div class="cert-icon">
+
+          <i class="fa-solid fa-cloud"></i>
+
+        </div>
+
 
         <h3>
-          AWS SimuLearn – Cloud Practitioner
+
+          AWS Cloud Training
+
         </h3>
 
+
+        <div class="cert-name">
+          AWS Cloud Learning
+        </div>
+
+
         <p>
-          Training Badge
+
+          Additional AWS learning focused on
+          cloud infrastructure, AWS services,
+          security, operations and modern
+          cloud technologies.
+
         </p>
 
       </div>
+
 
     </div>
 
+
     <br><br>
 
-    <a
-      href="https://www.credly.com/users/neetesh-kumar-namdev"
-      target="_blank"
-      class="btn btn-primary"
-    >
-      View Verified Credentials →
-    </a>
+
+    <div class="buttons">
+
+      <a
+        href="https://www.credly.com/"
+        target="_blank"
+        class="btn btn-primary"
+      >
+
+        <i class="fa-solid fa-certificate"></i>
+
+        View AWS Credentials
+
+      </a>
+
+    </div>
+
 
   </section>
 
 
-  <!-- PROJECTS -->
 
-  <section id="projects">
+  <!-- =========================================================
+       PROJECTS
+  ========================================================= -->
 
-    <h2 class="section-title">Projects</h2>
+  <section id="projects" class="reveal">
+
+
+    <div class="section-label">
+      Projects
+    </div>
+
+
+    <h2 class="section-title">
+      Cloud Projects
+    </h2>
+
 
     <p class="section-subtitle">
-      Cloud and DevOps projects
+
+      AWS infrastructure and DevOps projects
+
     </p>
+
 
     <div class="projects">
 
 
+      <!-- Project 1 -->
+
       <div class="project">
 
-        <h3>☁️ AWS Infrastructure Automation</h3>
+
+        <div class="project-top">
+
+          <div class="project-icon">
+
+            <i class="fa-solid fa-cloud"></i>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          AWS Infrastructure Automation
+        </h3>
+
 
         <p>
-          Infrastructure provisioning and automation using
-          AWS CloudFormation with reusable templates.
+
+          Infrastructure provisioning and automation
+          using AWS CloudFormation and reusable
+          infrastructure templates.
+
         </p>
 
+
         <div class="tags">
-          <span class="tag">AWS</span>
-          <span class="tag">CloudFormation</span>
-          <span class="tag">EC2</span>
-          <span class="tag">VPC</span>
+
+          <span class="tag">
+            AWS
+          </span>
+
+          <span class="tag">
+            CloudFormation
+          </span>
+
+          <span class="tag">
+            EC2
+          </span>
+
+          <span class="tag">
+            VPC
+          </span>
+
         </div>
 
       </div>
 
 
+
+      <!-- Project 2 -->
+
       <div class="project">
 
-        <h3>📊 AWS Monitoring Solution</h3>
+
+        <div class="project-top">
+
+          <div class="project-icon">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          AWS Monitoring & Alerting
+        </h3>
+
 
         <p>
-          CloudWatch dashboards, alarms and SNS notifications
-          for proactive infrastructure monitoring.
+
+          CloudWatch dashboards, alarms and
+          SNS notifications for proactive
+          infrastructure monitoring.
+
         </p>
 
+
         <div class="tags">
-          <span class="tag">CloudWatch</span>
-          <span class="tag">SNS</span>
-          <span class="tag">AWS</span>
+
+          <span class="tag">
+            CloudWatch
+          </span>
+
+          <span class="tag">
+            SNS
+          </span>
+
+          <span class="tag">
+            AWS
+          </span>
+
         </div>
 
       </div>
 
 
+
+      <!-- Project 3 -->
+
       <div class="project">
 
-        <h3>🐧 Linux Server Administration</h3>
+
+        <div class="project-top">
+
+          <div class="project-icon">
+
+            <i class="fa-brands fa-linux"></i>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          Linux Server Administration Lab
+        </h3>
+
 
         <p>
-          Linux server administration, patching,
-          troubleshooting and performance optimization.
+
+          Hands-on Linux administration including
+          system monitoring, troubleshooting,
+          patching, services and performance analysis.
+
         </p>
 
+
         <div class="tags">
-          <span class="tag">Linux</span>
-          <span class="tag">AWS EC2</span>
-          <span class="tag">Bash</span>
+
+          <span class="tag">
+            Linux
+          </span>
+
+          <span class="tag">
+            AWS EC2
+          </span>
+
+          <span class="tag">
+            Bash
+          </span>
+
         </div>
 
       </div>
 
 
+
+      <!-- Project 4 -->
+
       <div class="project">
 
-        <h3>🚀 DevOps Learning Lab</h3>
+
+        <div class="project-top">
+
+          <div class="project-icon">
+
+            <i class="fa-solid fa-network-wired"></i>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          AWS VPC Networking Lab
+        </h3>
+
 
         <p>
-          Hands-on learning project covering Docker,
-          Kubernetes, Terraform and AWS CI/CD.
+
+          Designed a multi-subnet AWS VPC environment
+          with public and private subnets, route tables,
+          gateways, Security Groups and NACLs.
+
         </p>
 
+
         <div class="tags">
-          <span class="tag">Docker</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Terraform</span>
-          <span class="tag">CI/CD</span>
+
+          <span class="tag">
+            VPC
+          </span>
+
+          <span class="tag">
+            Subnets
+          </span>
+
+          <span class="tag">
+            NAT Gateway
+          </span>
+
+          <span class="tag">
+            Security
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Project 5 -->
+
+      <div class="project">
+
+
+        <div class="project-top">
+
+          <div class="project-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          AWS IAM Security Lab
+        </h3>
+
+
+        <p>
+
+          Hands-on IAM security implementation using
+          users, groups, roles and policies with
+          least-privilege access principles.
+
+        </p>
+
+
+        <div class="tags">
+
+          <span class="tag">
+            IAM
+          </span>
+
+          <span class="tag">
+            Security
+          </span>
+
+          <span class="tag">
+            CloudTrail
+          </span>
+
+          <span class="tag">
+            AWS
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Project 6 -->
+
+      <div class="project">
+
+
+        <div class="project-top">
+
+          <div class="project-icon">
+
+            <i class="fa-solid fa-gears"></i>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          DevOps Learning Lab
+        </h3>
+
+
+        <p>
+
+          Hands-on learning environment covering
+          Docker, Kubernetes, Terraform, Git and
+          AWS CI/CD concepts.
+
+        </p>
+
+
+        <div class="tags">
+
+          <span class="tag">
+            Docker
+          </span>
+
+          <span class="tag">
+            Kubernetes
+          </span>
+
+          <span class="tag">
+            Terraform
+          </span>
+
+          <span class="tag">
+            CI/CD
+          </span>
+
         </div>
 
       </div>
@@ -1092,132 +3155,279 @@
   </section>
 
 
-  <!-- EDUCATION -->
 
-  <section>
+  <!-- =========================================================
+       EDUCATION
+  ========================================================= -->
 
-    <h2 class="section-title">Education</h2>
+  <section class="reveal">
+
+
+    <div class="section-label">
+      Education
+    </div>
+
+
+    <h2 class="section-title">
+      Academic Background
+    </h2>
+
 
     <p class="section-subtitle">
-      Academic background
+
+      Education and professional foundation
+
     </p>
 
-    <div class="card">
 
-      <h3>Bachelor of Technology (B.Tech)</h3>
+    <div class="card education-card">
 
-      <p>
-        
-      </p>
 
-      <br>
+      <div class="education-icon">
 
-      <p>
-        University Institute of Technology, RGPV, Bhopal
-      </p>
+        <i class="fa-solid fa-graduation-cap"></i>
 
-      <p>
-        2023
-      </p>
+      </div>
+
+
+      <div>
+
+
+        <h3>
+          Bachelor of Technology (B.Tech)
+        </h3>
+
+
+        <p>
+          Automobile Engineering
+        </p>
+
+
+        <p>
+          University Institute of Technology,
+          RGPV, Bhopal
+        </p>
+
+
+        <p>
+          2023
+        </p>
+
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- CONTACT -->
 
-  <section id="contact" class="contact">
+  <!-- =========================================================
+       CONTACT
+  ========================================================= -->
+
+  <section
+    id="contact"
+    class="contact reveal"
+  >
+
+
+    <div class="section-label">
+      Contact
+    </div>
+
 
     <h2 class="section-title">
       Let's Connect
     </h2>
 
-    <p>
-      Interested in Cloud, AWS, DevOps or infrastructure?
+
+    <p class="section-subtitle">
+
+      Interested in AWS Cloud, infrastructure,
+      networking, security or DevOps?
       Feel free to connect with me.
+
     </p>
 
+
     <div class="socials">
+
 
       <a
         class="social"
         href="mailto:n.namdev.nn@gmail.com"
       >
-        📧 Email
+
+        <i class="fa-solid fa-envelope"></i>
+
+        Email
+
       </a>
+
 
       <a
         class="social"
         href="https://github.com/nknamdev"
         target="_blank"
+        rel="noopener"
       >
-        💻 GitHub
+
+        <i class="fa-brands fa-github"></i>
+
+        GitHub
+
       </a>
+
 
       <a
         class="social"
-        href="https://www.linkedin.com/in/neetesh-kumar-namdev-56706517a/"
+        href="https://www.linkedin.com/"
         target="_blank"
+        rel="noopener"
       >
-        🔗 LinkedIn
+
+        <i class="fa-brands fa-linkedin"></i>
+
+        LinkedIn
+
       </a>
 
+
     </div>
+
 
   </section>
 
 
-  <!-- FOOTER -->
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
 
   <footer>
 
-    © 2026 Neetesh Kumar Namdev ·
-    AWS Cloud Engineer
+    <p>
+
+      © <span id="year"></span>
+      Neetesh Kumar Namdev
+
+      ·
+
+      AWS Cloud Engineer
+
+    </p>
 
   </footer>
 
 
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================= -->
+
   <script>
 
-    // Simple reveal animation
 
-    const observer = new IntersectionObserver(
-      (entries) => {
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
 
-        entries.forEach((entry) => {
+    const mobileMenu =
+      document.getElementById("mobileMenu");
 
-          if (entry.isIntersecting) {
+    const navLinks =
+      document.getElementById("navLinks");
 
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
 
-          }
+    mobileMenu.addEventListener(
+      "click",
+      function () {
 
-        });
+        navLinks.classList.toggle("active");
 
-      },
-      {
-        threshold: 0.1
       }
     );
 
 
+    /* Close mobile menu when clicking link */
+
     document
-      .querySelectorAll(".card, .skill-card, .project, .cert, .stat")
-      .forEach((element) => {
+      .querySelectorAll(".nav-links a")
+      .forEach(
+        function (link) {
 
-        element.style.opacity = "0";
-        element.style.transform = "translateY(20px)";
-        element.style.transition = "all .6s ease";
+          link.addEventListener(
+            "click",
+            function () {
 
-        observer.observe(element);
+              navLinks.classList.remove(
+                "active"
+              );
 
-      });
+            }
+          );
+
+        }
+      );
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    const observer =
+      new IntersectionObserver(
+        function (entries) {
+
+          entries.forEach(
+            function (entry) {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "active"
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(
+        function (element) {
+
+          observer.observe(element);
+
+        }
+      );
+
+
+    /* =========================================================
+       CURRENT YEAR
+    ========================================================= */
+
+    document.getElementById(
+      "year"
+    ).textContent =
+      new Date().getFullYear();
+
 
   </script>
 
+
 </body>
 </html>
-
-
+```
